@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Component Demo</title>
+    <script>
+      function changeAvatar() {
+        document.getElementById("avatar").desc = "GXZ";
+        document.getElementById("avatar").src = "/f.png";
+      }
+
+      function avatarClick(e) {
+        console.log("click");
+      }
+    </script>
+  </head>
+  <body style="background: #ccc;">
+    <g-avatar
+      id="avatar"
+      src="/cs.png"
+      desc="HelloGXZ"
+      onclick="avatarClick()"
+    ></g-avatar>
+    <button onclick="changeAvatar()">修改头像</button>
+  </body>
+  <script src="./g-avatar.js"></script>
+</html>
